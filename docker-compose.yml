@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  stapi-worker:
+    container_name: stapi-worker
+    image: ${DOCKER_REGISTRY-}stapi-worker
+    build:
+      context: .
+      dockerfile: Stapi.Worker/Dockerfile
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3.12.8-management-alpine
+    container_name: 'rabbitmq'
+
+  postgres:
+    container_name: postgres
+    image: postgres:16-alpine

@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Stapi.Worker (Development)": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true
+    },
+    "Docker (Development)": {
+      "commandName": "Docker"
+    }
+  }
+}
